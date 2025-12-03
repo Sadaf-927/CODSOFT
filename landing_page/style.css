@@ -1,0 +1,327 @@
+*{
+        margin:0;
+        padding:0;
+   font-family: "Poppins",sans-serif;
+}
+:root{
+  --color1: #f5d7bbc6;
+  --color2:#ff7f51;
+  --color3:#ce4257;
+  --color4:#720026;
+  --color5:#4f000b;
+ 
+}
+
+.navbar{
+  height:4rem;
+  width: 100vw;
+  background-color: var(--color1);
+  position:fixed;
+ 
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+}
+
+
+.navbar a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color:var(--color5);
+  font-weight: 500;
+}
+
+.logo{
+  display: flex;
+}
+
+#logo-img{
+  height:2.5rem;
+  width:3rem;
+  border-radius: 40%;
+   background-image: url(img/logo_.jpg);
+   background-size: cover;
+}
+
+#logo-text{
+  padding-top:1rem;
+  padding-left:0.2rem;
+  color:var(--color4);
+ font-weight: 600;
+ text-transform: capitalize;
+}
+
+.navlist{
+
+  width:40%;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+}
+/* .navlist a{
+ transition: all 1.5s ease-in  ;
+} */
+.navlist a:hover{
+ 
+ width: 3rem;
+
+ border-bottom: 2px solid var(--color5);
+ background-color: var(--color1);
+}
+
+main{
+  /* margin-top: 4rem; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+}
+.background{
+  height: 100vh;
+  width: 100vw;
+  background-image: url(img/cafe_back.jpg);
+  background-size: cover;
+  /* position: relative; */
+ 
+  opacity: 0.80;
+  z-index:-1;
+
+}
+
+
+.content{
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+    position:absolute;
+  z-index: -1;
+ 
+ 
+}
+.heading{
+  font-size: larger;
+}
+
+.text p{
+ text-align: center;
+  font-weight:400;
+  
+}
+
+button{
+  padding:2px;
+  height:2rem;
+  border:2px solid var(--color5);
+ background-color: inherit;
+  border-radius: 5px;
+ 
+}
+
+.icons{
+  height: 100px;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center ;
+
+
+
+}
+.icons i{
+  padding-top:2px;
+  height: 2rem;
+  width:2rem;
+  border-radius:5px;
+  border: 2px solid var(--color5);
+  font-size: 2rem;
+  color:var(--color5);
+  transition: all 0.5s ease-in;
+   
+}
+.icons i:hover{
+  background-color: var(--color1);
+  cursor: pointer;
+   
+}
+button:hover{
+    background-color: var(--color1);
+  cursor: pointer;
+}
+
+.navbar .btn{
+
+  color:var(--color5);
+  align-items: center;
+  cursor: pointer;
+   display:none;
+}
+
+
+
+@media (max-width:900px){
+  .navbar .btn{
+    display: block;
+  }
+  .navlist{
+    background-color:burlywood;
+    position:fixed;
+   z-index: 2;
+   top:0;
+    right:-300%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 50vh;
+    min-width: 100%;
+  }
+  .navlist li{
+     width: 100%;
+    margin:1rem 2rem;
+  
+    border-bottom:1px solid var(--color5);
+    padding-bottom:0.7rem;
+  }
+  .close-btn{
+    position:absolute;
+    top:2rem;
+    right:3rem;
+
+  }
+  .menu-btn{
+    padding:1rem;
+  }
+ .navlist.active{
+  right:0;
+ }
+ 
+ 
+}
+
+
+
+@media (max-width:869px)and (min-width:608px){
+  .content{
+    padding:2rem;
+    font-size: 0.85rem;
+  }
+}
+@media (max-width:608px) {
+  .content{
+     font-size:0.85rem;
+padding:1rem;
+ gap:0.5rem;
+}
+
+.heading{
+  font-size: medium;
+}
+
+
+}
+@media (max-width:540px) {
+  .content{
+ padding:0.5rem;
+  }
+  .heading{
+  font-size: small;
+}
+
+.icons i{
+  height: 1.5rem;
+  width:1.5rem;
+  font-size: 1.5rem;
+ 
+}
+button{
+  padding:1px;
+  height:1.5rem;
+
+}
+}
+@media (max-width:433px){
+    .content{
+padding:0.3rem;
+  }
+  .heading{
+  font-size: smaller;
+}
+.text p{
+  font-size:smaller;
+}
+}
+@media (max-width:420px){
+    .content{
+      
+ padding:0.5rem;
+  }
+  .heading{
+  font-size: smaller;
+
+}
+  .sub-heading{
+    font-size:11px;
+    padding:0 1rem;
+  }
+
+  
+button{
+
+  height:1.3rem;
+  font-size: 10px;
+
+}
+}
+@media (max-width:376px){
+      .content{
+      
+ padding:3px;
+  }
+  .heading{
+  font-size:10px;
+
+}
+}
+@media (max-width:328px){
+       .content{
+      
+ padding:3px;
+  }
+  .heading{
+  font-size:8px;
+
+}  .sub-heading{
+    font-size:8px;
+}.text p{
+  font-size:8px;
+}
+}
+@media (max-width:257px){
+        .content{
+      
+ padding:3px;
+  }
+  .heading{
+  font-size:7px;
+
+}  .sub-heading{
+    font-size:7px;
+}.text p{
+  font-size:7px;
+}
+}
+
+footer{
+  padding-top:1rem;
+  text-align: center;
+ height: 10rem;
+  background-color: var(--color2);
+}
+
+
